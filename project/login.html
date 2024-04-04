@@ -64,6 +64,8 @@
 
         if (email === userData.email && password === userData.password) {
           console.log("sucesso");
+          //redirecionar para pagina register
+            window.location.href = 'paciente.html';
           // Aqui você pode redirecionar o usuário para a página principal ou realizar outras ações de login bem-sucedido
         } else {
           alert('E-mail ou senha incorretos.');
