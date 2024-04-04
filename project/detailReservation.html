@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rent Elegance</title>
+  <link rel="icon" type="image/x-icon" href="res/icon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+
+<body>
+ 
+  <nav class="autohide navbar navbar-expand navbar-dark fixed-top " aria-label="Second navbar example">
+    <div class="container">
+
+      <a class="navbar-brand fadein" href="./catalog.html">
+        <img src="./res/icon.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+      </a>
+
+      <div class="navbar-collapse d-flex justify-content-start fadein d-none d-md-block">
+        <ul class="navbar-nav ml-auto d-flex align-items-center d-none d-md-block">
+          <li class="nav-item ml-xs-5 ms-4">
+            <a href="./catalog.html"> <i class="fa-solid fa-house text-white h3 m-2 scale-2"></i> </a>
+          </li>
+          <li class="nav-item">
+            <text class="title navbar-brand text-uppercase">Rent Elegance</text>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-collapse d-flex justify-content-end slidein">
+        <ul class="navbar-nav d-flex align-items-center ">
+          <li class="nav-item ml-xs-5 ms-4">
+            <a href="./ListofFavorites.html"> <i class="fa-regular fa-heart text-white h3 m-2 scale-2"></i> </a>
+          </li>
+          <li class="nav-item ms-4">
+            <a href="./createVenue.html" class="btn btn-add-venue m-2 scale-1 d-none d-md-block">
+              <text class="main-buttons h6">Adicionar Venue</text> <i class="fa fa-plus"></i>
+            </a>
+          </li>
+          <li class="nav-item ms-4">
+
+            <div class="dropdown">
+              <a type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="rounded-circle shadow-4-strong scale-1" src="./res/profile.jpg" width="50" height="50" />
+              </a>
+              <div class="dropdown-menu dropdown-menu-end rounded-1 p-3">
+                <a class="dropdown-item" href="./PersonalArea.html"><i class="fa-solid fa-user me-3"></i>Perfil</a>
+                <a class="dropdown-item" href="./ListofFavorites.html"><i
+                    class="fa-regular fa-heart me-3"></i>Favoritos</a>
+                <a class="dropdown-item" href="./listReservations.html"><i
+                    class="fa-regular fa-clipboard me-3"></i>Reservas</a>
+                <a class="dropdown-item" href="./ListVenues.html"><i class="fa-solid fa-house me-3"></i>Minhas
+                  venues</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fa fa-sign-out me-3"></i> Sair</a>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!--Main Content Area-->
+  <div class="content container mt-5 p-5 shadow-div shadow justify-content-center">
+    <div class="row ">
+
+      <!-- Main Content Area -->
+      <div class="container mt-5 ">
+        <div class="row mb-4 ">
+          <!-- Pedido Header -->
+          <div class="col-8">
+            <h3 class="mb-0 font-weight-bold " style="color: white;">Pedido id #6548</h3>
+          </div>
+        </div>
+
+        <div class="row mb-5 ">
+          <!-- Event Info -->
+          <div class="col-md-6 shadow-div shadow p-3" style="padding-right: 10%;">
+            <div class="card " style="background-color: transparent;  border: none;">
+              <img src="./res/venue.jpg" class="card-img-top" alt="Skyline Loft Experience" />
+              <div class="card-body">
+                <h3 class="card-title text-white pb-2">Skyline Loft Experience</h3>
+                <p class="card-text text-white">07 de setembro 2023 (09:00 - 16:00)</p>
+                <p class="card-text text-white">55 convidados</p>
+                <p class="card-text text-white"><span class=" btn-primary p-2"
+                    style="border-radius:10px ;">Casamento</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing Table -->
+          <div class="col-md-6  ">
+
+            <table class="table table-borderless text-white caption-top "
+              style="white-space: nowrap !important; padding-left: 15px; padding-right: 15px;">
+              <caption> <span class="badge bg-warning text-dark">ESTADO DO PEDIDO: PENDENTE</span></caption>
+              <thead>
+                <tr  class ="header" style="border-bottom: solid 1px white;">
+                 
+                  <th class="pl-3 pr-3">SERVIÇOS REQUISITADOS</th>
+                  <th>PREÇO</th>
+                  <th>DISC.</th>
+                  <th>TOTAL</th>
+                  
+                </tr>
+              </thead>
+              <tbody class="table-group-divider ">
+                <tr class="pt-3 pb-3 service">
+               
+                  <td>
+                    Nazaré Mar Venue
+                  </td>
+                  <td>$999.29</td>
+                  <td class="discount">5%</td>
+                  <td>$949.32</td>
+                </tr>
+                <tr class="pt-3 pb-3 service" >
+                  <td>Catering</td>
+                  <td>$325.19</td>
+                  <td class="discount">5%</td>
+                  <td>$308.93</td>
+                </tr>
+                <tr class="pt-3 pb-3 service">
+                  <td>Gestão de convidados</td>
+                  <td>$249.99</td>
+                  <td class="discount">15%</td>
+                  <td>$237.49</td>
+                </tr>
+                <!-- Subtotals and Totals -->
+                <tr >
+                  <td colspan="3" class="text-end" style="opacity: 0.5;">Subtotal</td>
+                  <td class="subtotal">$1574.47</td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="text-end" style="opacity: 0.5;">IVA</td>
+                  <td class="IVA">$362.13</td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="text-end" style="opacity: 0.5;">Desconto Reserva</td>
+                  <td class="discount">$78.73</td>
+                </tr>
+                <tr style="border-top: solid 1px white;">
+                  <td colspan="3" class="">Total</td>
+                  <td class="fw-bold total">$1830.87</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Button -->
+            <div class="d-grid">
+              <button class="btn btn-primary orcamento btn-lg mt-3" id="toggleButton" >
+                Gerir orçamento
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan your Venue section -->
+      <div class="row pb-5">
+
+        <h2 class="text-white">Planei a sua venue</h2>
+
+        <!-- Venue Info -->
+        <div class="col-md-6">
+          <h5 class="text-white">Serviços</h5>
+          <div class="shadow-div shadow">
+            <ul class="nav nav-tabs" id="taskTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active text-black" id="type1-tab" data-bs-toggle="tab" href="#type1" role="tab"
+                  aria-controls="type1" aria-selected="true">Catering</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="type2-tab text-black" data-bs-toggle="tab" href="#type2" role="tab" aria-controls="type2"
+                  aria-selected="false">Fotografo</a>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="taskTabContent">
+              <!-- Type 1 Content -->
+              <div class="tab-pane fade show active" id="type1" role="tabpanel" aria-labelledby="type1-tab">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="catering" class="form-label">Catering</label>
+                        <h2>Serviços de Catering</h2>
+  <p>Em [Nome da Sua Empresa], nossos serviços de catering são focados em criar uma experiência culinária que encante todos os paladares. Oferecemos uma variedade de opções de catering para qualquer evento, desde jantares íntimos a grandes reuniões.</p>
+  <ul>
+    <li><strong>Catering para Casamentos:</strong> Menus personalizados para tornar o seu dia especial ainda mais memorável.</li>
+    <li><strong>Catering Corporativo:</strong> De almoços de negócios a grandes eventos corporativos, fornecemos refeições que impressionam.</li>
+    <li><strong>Catering para Festas Particulares:</strong> Seja um aniversário, aniversário de casamento ou qualquer celebração, atendemos a todas as suas necessidades.</li>
+  </ul>
+  <p>Nossos chefs utilizam apenas os ingredientes mais frescos para preparar pratos deliciosos e visualmente atraentes que certamente serão o destaque do seu evento.</p>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Efetuar pedido
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Type 2 Content -->
+              <div class="tab-pane fade" id="type2" role="tabpanel" aria-labelledby="type2-tab">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="fotografo-input" class="form-label">Fotografo</label>
+                        <div id="photographyServicesTab" class="tab-content">
+                          <h2>Photography Services</h2>
+                          <p>Our photography services are designed to capture the essence of your event in stunning detail. From intimate gatherings to grand celebrations, our photographers use the latest equipment and techniques to create breathtaking images.</p>
+                          <ul>
+                            <li><strong>Event Photography:</strong> Covering all types of events, capturing the moments as they unfold.</li>
+                            <li><strong>Portrait Photography:</strong> Personalized sessions for individuals, families, or groups.</li>
+                            <li><strong>Commercial Photography:</strong> Professional imagery for branding, marketing, and promotional needs.</li>
+                          </ul>
+                          <p>Each session is tailored to meet your specific requirements, ensuring that we tell your story exactly how you envision it.</p>
+                        </div>
+                        
+                        <div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Efetuar pedido
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- List of tasks section -->
+      <div class="col-md-6 ">
+          <h5 class="text-white">Lista de Tarefas</h5>
+          <div class="shadow-div shadow  pb-4  ">
+            <div class="p-2 pt-4">
+              <input type="text" class="form-control bg-transparent inputDetailReservation" placeholder="+ Adicionar Tópico">
+            </div>
+            <div class="list-group p-2" style="padding-top: 2%;">
+              <div class="list-group-item w-100  " style="background-color: transparent;  align-self: center;">
+                <input class="form-check-input me-2" type="checkbox" value="" id="catering">
+                <label class="form-check-label" for="catering">Catering e Alimentação</label>
+              </div>
+              <div class="pb-1"></div>
+              <div class="list-group-item w-100 " style="background-color: transparent; ;  align-self: center;">
+                <input class="form-check-input me-2" type="checkbox" value="" id="gestao">
+                <label class="form-check-label" for="gestao">Gestão de Convidados</label>
+              </div>
+              <div class="pb-1"></div>
+              <div class="list-group-item w-100 " style="background-color: transparent; align-self: center;">
+                <input class="form-check-input me-2" type="checkbox" value="" id="florista" checked>
+                <label class="form-check-label" for="florista">Florista e Decoração</label>
+              </div>
+              <div class="pb-1"></div>
+              <div class="list-group-item w-100 " style="background-color: transparent;  align-self: center;">
+                <input class="form-check-input me-2" type="checkbox" value="" id="bolo" checked>
+                <label class="form-check-label" for="bolo">Bolo de noiva</label>
+              </div>
+              <div class="pb-1"></div>
+              <div class="list-group-item w-100 " style="background-color: transparent; align-self: center;">
+                <input class="form-check-input me-2" type="checkbox" value="" id="fotografo">
+                <label class="form-check-label" for="fotografo">Fotografo</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- List of tasks section -->
+      
+    </div>
+
+
+  </div>
+  </div>
+</div>
+  <!--Footer-->
+  <footer class="py-4 text-center text-md-start">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <div class="d-flex justify-content-center justify-content-md-start p-4 p-md-0">
+            <ul class="nav flex-column">
+              <h4 class="text-white">Contactos</h4>
+              <li class="nav-item mb-2 text-white">
+                <i class="fa-solid fa-house me-2"></i>Universidade Nova FCT
+              </li>
+              <li class="nav-item mb-2 text-white">
+                <i class="fa-solid fa-phone me-2"></i>+(351) 213 131 231
+              </li>
+              <li class="nav-item mb-2 text-white">
+                <i class="fa-solid fa-envelope me-2"></i>geral@rentelegance.pt
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-12">
+          <div class="d-flex justify-content-center justify-content-md-start p-4 p-md-0">
+            <ul class="nav flex-column">
+              <h4 class="text-white">Redes Sociais</h4>
+
+              <ul class="nav list-inline">
+                <li class="btn btn-social">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="btn btn-social"><i class="fab fa-twitter"></i></li>
+                <li class="btn btn-social">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+                <li class="btn btn-social">
+                  <i class="fab fa-whatsapp"></i>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-12">
+          <div class="d-flex justify-content-center justify-content-md-start p-4 p-md-0">
+            <form>
+              <h4 class="text-white">Subscreva a nossa newsletter</h4>
+              <p class="text-white">
+                Seja o primeiro a receber as novidades.
+              </p>
+              <div class="d-flex w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email" />
+                <button class="btn btn-subscribe text-white" type="button">
+                  Subscrever
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright">
+    <div class="text-center text-white p-1">© 2023 Copyright IMP Classes</div>
+  </div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/77b73da3f6.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="./javascript/java.js"></script>
+
+  <script>
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] === variable) {
+          return pair[1];
+        }
+      }
+      return false;
+    }
+
+    if (getQueryVariable("rented") === "true")
+      createSuccessToast(5000, "Pedido de aluger enviado com sucesso!");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<style>
+  .overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    padding: 5px;
+    z-index: 1;
+  }
+
+  .custom-text {
+    font-size: 25px;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rent Elegance</title>
+  <link rel="icon" type="image/x-icon" href="res/icon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+
+<body>
+  <nav class="autohide navbar navbar-expand navbar-dark fixed-top " aria-label="Second navbar example">
+    <div class="container">
+
+      <a class="navbar-brand fadein" href="./catalog.html">
+        <img src="./res/icon.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+      </a>
+
+      <div class="navbar-collapse d-flex justify-content-start fadein d-none d-md-block">
+        <ul class="navbar-nav ml-auto d-flex align-items-center d-none d-md-block">
+          <li class="nav-item">
+            <text class="title navbar-brand text-uppercase">Rent Elegance</text>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-collapse d-flex justify-content-end slidein">
+        <ul class="navbar-nav d-flex align-items-center ">
+          <li class="nav-item ml-xs-5 ms-4">
+            <a href="./catalog.html"> <i class="fa-solid fa-house text-white h3 m-2 scale-2"></i> </a>
+          </li>
+          <li class="nav-item ml-xs-5 ms-4">
+            <a href="./ListofFavorites.html"> <i class="fa-regular fa-heart text-white h3 m-2 scale-2"></i> </a>
+          </li>
+          <li class="nav-item ms-4">
+            <a href="./createVenue.html" class="btn btn-add-venue m-2 scale-1 d-none d-md-block">
+              <text class="main-buttons h6">Adicionar Venue</text> <i class="fa fa-plus"></i>
+            </a>
+          </li>
+          <li class="nav-item ms-4">
+
+            <div class="dropdown">
+              <a type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="rounded-circle shadow-4-strong scale-1" src="./res/profile.jpg" width="50" height="50" />
+              </a>
+              <div class="dropdown-menu dropdown-menu-end rounded-1 p-3">
+                <a class="dropdown-item" href="./PersonalArea.html"><i class="fa-solid fa-user me-3"></i>Perfil</a>
+                <a class="dropdown-item" href="./ListofFavorites.html"><i
+                    class="fa-regular fa-heart me-3"></i>Favoritos</a>
+                <a class="dropdown-item" href="./listReservations.html"><i
+                    class="fa-regular fa-clipboard me-3"></i>Reservas</a>
+                <a class="dropdown-item" href="./ListVenues.html"><i class="fa-solid fa-house me-3"></i>Minhas
+                  venues</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fa fa-sign-out me-3"></i> Sair</a>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="content container p-5 pt-0 fadein-l">
+    <div class="row shadow-div shadow p-5">
+
+      <div class="col-12">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="text-white overlay-text main-buttons">
+            <div class="row h2 p-3" style="background-color: rgba(0, 0, 0, 0.6);">
+              <text style="color:rgb(255, 255, 255);">Mansão das Estrelas Cadentes</text>
+            </div>
+          </div>
+          <div class="carousel-inner" style="aspect-ratio: 16 /9;">
+            <div class="carousel-item active">
+              <img src="res/venue.jpg" class="d-block w-100 image-venue-slide" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="res/venue.jpg" class="d-block w-100 image-venue-slide" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="res/venue.jpg" class="d-block w-100 image-venue-slide" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-12 d-flex mt-4">
+        <div class="col-2 h5">
+          <text style="color:rgb(199, 198, 198);">Localização:</text>
+          <p><i class="fa-solid text-white fa-location-dot"></i> <text style="color:rgb(255, 255, 255);">Cascais</text>
+          </p>
+        </div>
+        <div class="col-2 h5">
+          <text style="color:rgb(199, 198, 198);">Lotação:</text>
+          <p><i class="fa-solid text-white fa-user"></i> <text style="color:rgb(255, 255, 255);">200</text></p>
+        </div>
+        <div class="col-2 h5">
+          <text style="color:rgb(199, 198, 198);">Preço:</text>
+          <p><text style="color:rgb(255, 255, 255);">€ 1500,00</text></p>
+        </div>
+        <div class="d-flex justify-content-end col-6">
+          <button onclick="window.location.href='rent.html';" class="btn main-buttons h6 text-white me-4 scale-1"
+            style="background-color:  var( --normal-color); font-size: 20px">Reservar</button>
+
+          <button type="button" class="btn main-buttons h6 text-white d-flex align-items-center justify-content-center scale-1"
+            style="background-color:  var( --normal-color); font-size: 20px" onclick="toggleFavorite()">
+            <i class="fa-regular fa-heart text-white scale-2 me-1" id="heart_id"></i>Favoritos</button>
+        </div>
+      </div>
+
+      <div class="row m-0">
+
+        <div class="col-8 shadow-div shadow p-3 px-3">
+          <!-- Metade Esquerda -->
+          <div class="p-3 pb-0 text-white main-buttons custom-text h2"><strong>Sobre o espaço:</strong><hr></div>
+          <div class="p-3 text-white">
+            <p>A Mansão das Estrelas Cadentes é um local verdadeiramente mágico e encantador, que cativa os corações dos noivos e convidados desde o primeiro instante. Aninhada em um cenário deslumbrante, esta mansão se destaca em meio a jardins exuberantes e um horizonte noturno deslumbrante.</p>
+
+            <p>À medida que os convidados entram pelos portões ornamentados, são imediatamente envolvidos por uma atmosfera de romance e magia. O caminho iluminado por lanternas suaves conduz à entrada principal, onde uma fachada elegante e clássica dá as boas-vindas a todos que chegam.</p>
+            
+            <p>O interior da Mansão das Estrelas Cadentes é um espetáculo de luxo e requinte. Salões espaçosos adornados com lustres cintilantes proporcionam o cenário perfeito para uma cerimônia de conto de fadas. Janelas amplas oferecem vistas panorâmicas do céu noturno, criando uma atmosfera celestial e única.</p>
+            
+            <p>Os jardins bem cuidados oferecem um espaço ideal para cerimônias ao ar livre, com uma área especialmente designada para recepções sob um dossel de luzes penduradas, criando um ambiente mágico à luz das estrelas. À medida que a noite avança, a Mansão das Estrelas Cadentes se transforma em um espetáculo de cores, com pontos de luz estrategicamente colocados, criando a ilusão de estrelas cadentes dançando ao redor.</p>
+            
+            <p>A culinária é uma experiência refinada, com chefs talentosos preparando pratos gourmet que são verdadeiras obras de arte culinárias. A equipe dedicada e atenciosa da mansão trabalha incansavelmente nos bastidores para garantir que cada detalhe, desde a decoração até o serviço, contribua para um evento que será lembrado como um conto de fadas real.</p>
+            
+            <p>A Mansão das Estrelas Cadentes é mais do que um local para casamentos; é um destino onde sonhos se tornam realidade e onde a magia do amor floresce sob o brilho eterno das estrelas cadentes.</p>
+            
+          </div>
+        </div>
+        
+        <div class="col-4 p-0">
+          <!-- Metade Direita -->
+          <div class="col-md-12 ms-2">
+            <!-- Linha 1 -->
+            <div class="shadow-div shadow p-3 mb-2">
+              <label class="text-white main-buttons custom-text mb-1">Serviços disponibilizados</label>
+              <ul class="list-group shadow-div shadow" >
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-martini-glass-empty"></i> Bar</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-regular fa-lightbulb"></i> Iluminação</li>
+                
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-utensils"></i> Catering</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-camera"></i> Fotografo</li>
+              
+              
+              </ul>
+            </div>
+            <!-- Linha 2 -->
+            <div class="shadow-div shadow p-3 mb-2">
+              <label class="text-white main-buttons custom-text mb-1">Comodidades do espaço</label>
+              <ul class="list-group shadow-div shadow">
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-water-ladder"></i> Piscina</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-tree"></i> Jardim</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-gamepad"></i> Sala de jogos</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-wifi"></i> Wifi</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-volume-high"></i> Equipamento de som</li>
+              
+       
+              </ul>
+            </div>
+            <!-- Linha 3 -->
+            <div class="shadow-div shadow p-3 mb-2">
+              <label class="text-white main-buttons custom-text mb-1">Layouts e configurações</label>
+              <ul class="list-group shadow-div shadow">
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-u"></i> U-shape</li>
+                <li class="list-group-item text-white" style="background-color: transparent !important;"><i class="fa-solid fa-briefcase"></i> Auditório</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <footer class="py-4 text-md-start text-center">
+
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-3 col-sm-12 p-4 p-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start">
+
+            <ul class="nav flex-column">
+              <h5 class="text-white">Contactos</h5>
+              <li class="nav-item mb-2 text-white"><i class="fa-solid fa-house me-2"></i>Universidade Nova FCT</li>
+              <li class="nav-item mb-2 text-white"><i class="fa-solid fa-phone me-2"></i>+(351) 213 131 231</li>
+              <li class="nav-item mb-2 text-white"><i class="fa-solid fa-envelope me-2"></i>geral@rentelegance.pt</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-12  p-4 p-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <ul class="nav flex-column">
+
+              <h5 class="text-white ">Redes Sociais</h5>
+
+              <ul class="nav list-inline">
+                <li class="btn btn-social"><i class="fab fa-facebook-f"></i></li>
+                <li class="btn btn-social"><i class="fab fa-twitter"></i></li>
+                <li class="btn btn-social"><i class="fab fa-linkedin-in"></i></li>
+                <li class="btn btn-social"><i class="fab fa-whatsapp"></i></li>
+
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 d-none d-md-block"></div>
+
+        <div class="col-md-4  p-4 p-md-0">
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <form>
+              <h5 class="text-white">Subscreva a nossa newsletter</h5>
+              <p class="text-white">Seja o primeiro a receber as novidades.</p>
+              <div class="d-flex w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email">
+                <button class="btn btn-subscribe text-white" type="button">Subscrever</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+  <div class="copyright">
+    <div class="text-center text-white p-1">© 2023 Copyright IMP Classes</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/77b73da3f6.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script type='text/javascript' src='./javascript/java.js'></script>
+</body>
+
+<script>
+  function toggleFavorite() {
+    var heartIcon = document.querySelector('.fa-heart');
+    if (heartIcon) {
+      if ($("#heart_id").hasClass('fa-solid')) {
+        $("#heart_id").removeClass("fa-solid")
+        $("#heart_id").addClass("fa-regular")
+        createFailureToast(1500, 'Removido dos favoritos!');
+      } else {
+        $("#heart_id").removeClass('fa-regular');
+        $("#heart_id").addClass('fa-solid');
+        createSuccessToast(1500, 'Adicionado aos favoritos!');
+      }
+    }
+  }
+</script>
+
+</html>
