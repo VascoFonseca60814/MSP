@@ -1,138 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rent Elegance</title>
+    <link rel="icon" type="image/x-icon" href="res/icon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rent Elegance</title>
-  <link rel="icon" type="image/x-icon" href="res/icon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  </head>
 
-  <link rel="stylesheet" type="text/css" href="./css/animations.css" />
-  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-</head>
+  <body style="min-height: 100vh">
+    <nav
+      class="autohide navbar navbar-expand navbar-dark fixed-top"
+      aria-label="Second navbar example"
+    >
+      <div class="container">
+        <a class="navbar-brand fadein" href="./catalog.html">
+          <img
+            src="./res/icon.png"
+            alt=""
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </a>
 
-<body>
-  <nav class="autohide navbar navbar-expand navbar-dark bg-dark fixed-top " aria-label="Second navbar example">
-    <div class="container">
+        <div
+          class="navbar-collapse d-flex justify-content-start fadein d-none d-md-block"
+        >
+          <ul
+            class="navbar-nav ml-auto d-flex align-items-center d-none d-md-block"
+          >
+            <li class="nav-item">
+              <text class="title navbar-brand text-uppercase"
+                >Rent Elegance</text
+              >
+            </li>
+          </ul>
+        </div>
 
-      <a class="navbar-brand fadein" href="#">
-        <img src="./res/icon.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
-      </a>
-
-      <div class="navbar-collapse d-flex justify-content-start fadein d-none d-md-block">
-        <ul class="navbar-nav ml-auto d-flex align-items-center d-none d-md-block">
-          <li class="nav-item">
-            <text class="title navbar-brand text-uppercase">Rent Elegance</text>
-          </li>
-        </ul>
-      </div>
-
-      <div class="navbar-collapse d-flex justify-content-end slidein">
-        <ul class="navbar-nav d-flex align-items-center ">
-          <li class="nav-item ml-xs-5 ms-4">
-            <i class="fa-regular fa-heart text-white h3 m-2 scale-2"></i>
-          </li>
-          <li class="nav-item ms-4">
-            <button type="button" class="btn btn-add-venue m-2 scale-1 d-none d-md-block"><text class="main-buttons h6">
-                Adicionar Venue</text> <i class="fa fa-plus"></i>
-            </button>
-          </li>
-          <li class="nav-item ms-4">
-
-            <div class="dropdown">
-              <a type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="rounded-circle shadow-4-strong scale-1" src="./res/profile.jpg" width="50" height="50" />
+        <div class="navbar-collapse d-flex justify-content-end slidein">
+          <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item ml-xs-5 ms-4">
+              <a href="./catalog.html">
+                <i class="fa-solid fa-house text-white h3 m-2 scale-2"></i>
               </a>
-              <div class="dropdown-menu dropdown-menu-end rounded-1 p-3">
-                <a class="dropdown-item" href="#"><i class="fa-solid fa-user me-3"></i>Perfil</a>
-                <a class="dropdown-item" href="#"><i class="fa-regular fa-heart me-3"></i>Favoritos</a>
-                <a class="dropdown-item" href="#"><i class="fa-regular fa-clipboard me-3"></i>Reservas</a>
-                <a class="dropdown-item" href="#"><i class="fa-solid fa-house me-3"></i>Minhas venues</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fa fa-sign-out me-3"></i> Sair</a>
+            </li>
+            <li class="nav-item ml-xs-5 ms-4">
+              <a href="./ListofFavorites.html">
+                <i class="fa-regular fa-heart text-white h3 m-2 scale-2"></i>
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <a
+                href="./createVenue.html"
+                class="btn btn-add-venue m-2 scale-1 d-none d-md-block"
+              >
+                <text class="main-buttons h6">Adicionar Venue</text>
+                <i class="fa fa-plus"></i>
+              </a>
+            </li>
+            <li class="nav-item ms-4">
+              <div class="dropdown">
+                <a
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="rounded-circle shadow-4-strong scale-1"
+                    src="./res/profile.jpg"
+                    width="50"
+                    height="50"
+                  />
+                </a>
+                <div class="dropdown-menu dropdown-menu-end rounded-1 p-3">
+                  <a class="dropdown-item" href="./PersonalArea.html"
+                    ><i class="fa-solid fa-user me-3"></i>Perfil</a
+                  >
+                  <a class="dropdown-item" href="./ListofFavorites.html"
+                    ><i class="fa-regular fa-heart me-3"></i>Favoritos</a
+                  >
+                  <a class="dropdown-item" href="./listReservations.html"
+                    ><i class="fa-regular fa-clipboard me-3"></i>Reservas</a
+                  >
+                  <a class="dropdown-item" href="./ListVenues.html"
+                    ><i class="fa-solid fa-house me-3"></i>Minhas venues</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-sign-out me-3"></i> Sair</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container fadein-l">
+      <div class="row justify-content-center" style="min-height: 75vh">
+        <div class="col-10 col-md-8 d-inline-block align-self-center">
+          <h1 class="text-white text-center display-2">
+            Uma venue à sua medida
+          </h1>
+          <h3 class="text-white text-center">
+            Traga a sua visão à vida connosco
+          </h3>
+
+          <div
+            class="bg-white m-3 p-2 rounded-2 p-1 shadow"
+            style="background-color: rgba(255, 255, 255, 0.8) !important"
+          >
+            <div class="container-fluid">
+              <div class="row justify-content-center">
+                <div class="col-xl-3 col-12 p-md-3 p-2">
+                  <input
+                    class="form-control scale-1"
+                    list="locop"
+                    id="loc"
+                    placeholder="Localização"
+                  />
+                  <datalist id="locop">
+                    <option value="Almada"></option>
+                    <option value="Palmela"></option>
+                    <option value="Lisboa"></option>
+                    <option value="Cascais"></option>
+                    <option value="Caparica"></option>
+                    <option value="Moita"></option>
+                    <option value="Montijo"></option>
+                  </datalist>
+                </div>
+                <div class="col-xl-3 col-12 p-md-3 p-2">
+                  <input
+                    class="form-control scale-1"
+                    list="tyop"
+                    id="ty"
+                    placeholder="Ocasião"
+                  />
+                  <datalist id="tyop">
+                    <option value="Casamentos"></option>
+                    <option value="Festas"></option>
+                    <option value="Conferências"></option>
+                    <option value="Congressos"></option>
+                    <option value="Aniversários"></option>
+                  </datalist>
+                </div>
+                <div class="col-xl-3 col-12 p-md-3 p-2">
+                  <input
+                    type="number"
+                    class="form-control scale-1"
+                    max="1000"
+                    min="1"
+                    id="convidados"
+                    placeholder="Convidados"
+                  />
+                </div>
+
+                <div class="col-xl-3 col-12 p-md-3 p-2">
+                  <button
+                    type="button"
+                    id="searchButton"
+                    class="btn w-100 scale-1"
+                    style="background-color: var(--normal-color)"
+                  >
+                    <text class="main-buttons h6 text-white">Pesquisar</text>
+                  </button>
+                </div>
               </div>
             </div>
-
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-
     </div>
-  </nav>
 
-  <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br><br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br><br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>
+    <br style="width: 20%" />
+    <div class="mb-5 shadow shadow-div p-5" style="margin-bottom: 10%  ">
+      <div class="container text-center mt-5 pb-5">
+        <!-- Section Title -->
+        <h2 class="mb-4 text-white text-center display-2">
+          Os nossos serviços
+        </h2>
 
-
-  <footer class="py-4 bg-dark text-md-start text-center">
-
-    <div class="container ">
-      <div class="row">
-        <div class="col-md-3 col-sm-12 p-4 p-md-0">
-          <div class="d-flex justify-content-center justify-content-md-start">
-
-            <ul class="nav flex-column">
-              <h5 class="text-white">Contactos</h5>
-              <li class="nav-item mb-2 text-white"><i class="fa-solid fa-house me-2"></i>Universidade Nova FCT</li>
-              <li class="nav-item mb-2 text-white"><i class="fa-solid fa-phone me-2"></i>+(351) 213 131 231</li>
-              <li class="nav-item mb-2 text-white"><i class="fa-solid fa-envelope me-2"></i>geral@rentelegance.pt</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-12  p-4 p-md-0">
-          <div class="d-flex justify-content-center justify-content-md-start">
-            <ul class="nav flex-column">
-
-              <h5 class="text-white ">Redes Sociais</h5>
-
-              <ul class="nav list-inline">
-                <li class="btn btn-social"><i class="fab fa-facebook-f"></i></li>
-                <li class="btn btn-social"><i class="fab fa-twitter"></i></li>
-                <li class="btn btn-social"><i class="fab fa-linkedin-in"></i></li>
-                <li class="btn btn-social"><i class="fab fa-whatsapp"></i></li>
-
-              </ul>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-2 d-none d-md-block"></div>
-
-        <div class="col-md-4  p-4 p-md-0">
-          <div class="d-flex justify-content-center justify-content-md-start">
-            <form>
-              <h5 class="text-white">Subscreva a nossa newsletter</h5>
-              <p class="text-white">Seja o primeiro a receber as novidades.</p>
-              <div class="d-flex w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden">Endereço de email</label>
-                <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email">
-                <button class="btn btn-subscribe text-white" type="button">Subscrever</button>
+        <div class="row justify-content-center">
+          <!-- Service 1 -->
+          <div class="col-md-5 mb-3 shadow-div shadow p-5 mx-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: 40px">
+                  Divulga a tua venue
+                </h5>
+                <p class="card-text">
+                  Adicione sua venue agora e veja seu negócio florescer!
+                </p>
+                <a href="createVenue.html" class="btn btn-primary px-3"
+                  >Exprimente</a
+                >
               </div>
-            </form>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-md-5 mb-3 shadow-div shadow p-5 mx-5">
+            <div class="card w-100 bg-white">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: 40px">
+                  Encontra a tua venue
+                </h5>
+                <p class="card-text">Descubra o espaço ideal para dar vida aos seus eventos.</p>
+                <a href="catalog.html" class="btn btn-primary">Exprimente</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <footer class="py-4 text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <div class="d-flex justify-content-center justify-content-md-start p-4 p-md-0">
+              <ul class="nav flex-column">
+                <h4 class="text-white">Contactos</h4>
+                <li class="nav-item mb-2 text-white">
+                  <i class="fa-solid fa-house me-2"></i>Universidade Nova FCT
+                </li>
+                <li class="nav-item mb-2 text-white">
+                  <i class="fa-solid fa-phone me-2"></i>+(351) 213 131 231
+                </li>
+                <li class="nav-item mb-2 text-white">
+                  <i class="fa-solid fa-envelope me-2"></i>geral@rentelegance.pt
+                </li>
+              </ul>
+            </div>
+          </div>
 
-  </footer>
-  <div class="copyright">
-    <div class="text-center text-white p-1">© 2023 Copyright IMP Classes</div>
-  </div>
+          <div class="col-md-4 col-12">
+            <div class="d-flex justify-content-center justify-content-md-start p-4 p-md-0">
+              <ul class="nav flex-column">
+                <h4 class="text-white">Redes Sociais</h4>
 
-  <script defer src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/77b73da3f6.js" crossorigin="anonymous"></script>
-  <script type='text/javascript' src='./javascript/java.js'></script>
-</body>
+                <ul class="nav list-inline">
+                  <li class="btn btn-social">
+                    <i class="fab fa-facebook-f"></i>
+                  </li>
+                  <li class="btn btn-social"><i class="fab fa-twitter"></i></li>
+                  <li class="btn btn-social">
+                    <i class="fab fa-linkedin-in"></i>
+                  </li>
+                  <li class="btn btn-social">
+                    <i class="fab fa-whatsapp"></i>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
 
+          <div class="col-md-4 col-12">
+            <div class="d-flex justify-content-center justify-content-md-start p-4 p-md-0">
+              <form>
+                <h4 class="text-white">Subscreva a nossa newsletter</h4>
+                <p class="text-white">
+                  Seja o primeiro a receber as novidades.
+                </p>
+                <div class="d-flex w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email" />
+                  <button class="btn btn-subscribe text-white" type="button">
+                    Subscrever
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <div class="text-center text-white p-1">© 2023 Copyright IMP Classes</div>
+    </div>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/77b73da3f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./javascript/java.js"></script>
+
+    <script>
+      function loadInfoToCatalog() {
+        var searchButton = document.getElementById("searchButton");
+        if (searchButton) {
+          searchButton.addEventListener("click", () => {
+            var localizacao = document.getElementById("loc").value;
+            var ocasiao = document.getElementById("ty").value;
+            var convidados = document.getElementById("convidados").value;
+
+            localStorage.setItem("localizacao", localizacao);
+            localStorage.setItem("ocasiao", ocasiao);
+            localStorage.setItem("convidados", convidados);
+
+            window.location.href = "./catalog.html";
+          });
+        }
+      }
+      loadInfoToCatalog();
+    </script>
+  </body>
 </html>
