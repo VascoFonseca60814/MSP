@@ -54,10 +54,10 @@
         </div>
 
         <div class="col-12 mt-3">
-          <button class="btn px-5 mt-2 scale-1 text-white float-end" type="submit"
-          style="background-color: var(--base-color);">
-          Registrar
-        </button>
+            <button class="btn px-5 mt-2 scale-1 text-white float-end" type="submit"
+            style="background-color: var(--base-color);">
+            Registrar
+          </button>
         </div>
       </form>
     </div>
@@ -87,15 +87,16 @@
           name: this.querySelector('[name="name"]').value,
           email: this.querySelector('[name="email"]').value,
           password: this.querySelector('[name="password"]').value,
+          // Aqui você poderia adicionar uma função para criptografar a senha antes de armazenar
         };
 
         // Salvar os dados no localStorage
-        localStorage.setItem('userData', JSON.stringify(formData));
+        localStorage.setItem('doctorData', JSON.stringify(formData));
 
-        alert('Usuário registrado com sucesso!');
-        console.log("redireção");
+        alert('Doutor registrado com sucesso!');
+
         // Redirecionar para a página de login
-        window.location.href = 'login.html';
+        window.location.href = 'login_doctor.html';
       });
     });
   </script>
