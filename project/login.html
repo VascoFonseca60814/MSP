@@ -14,7 +14,7 @@
 <nav class="autohide navbar navbar-expand navbar-dark fixed-top ">
   <div class="container">
     <a class="navbar-brand fadein" href="#">
-      <img src="./res/icon.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+      <img src="./res/logo2.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
       Login
     </a>
   </div>
@@ -51,6 +51,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('userData')){
+      var predefinedData = {
+        email: 'admin@admin.com',
+        password: 'admin',
+      };
+    
+      localStorage.setItem('userData', JSON.stringify(predefinedData));
+    }
     var loginForm = document.getElementById('loginForm');
 
     loginForm.addEventListener('submit', function(e) {
@@ -65,7 +73,7 @@
         if (email === userData.email && password === userData.password) {
           console.log("sucesso");
           //redirecionar para pagina register
-            window.location.href = 'paciente.html';
+          window.location.href = 'paciente.html';
           // Aqui você pode redirecionar o usuário para a página principal ou realizar outras ações de login bem-sucedido
         } else {
           alert('E-mail ou senha incorretos.');
