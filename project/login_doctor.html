@@ -66,14 +66,14 @@
 
       var storedData = localStorage.getItem('doctorData');
       if (storedData) {
-        var userData = JSON.parse(storedData);
+        var doctorData = JSON.parse(storedData);
         var email = this.querySelector('[name="email"]').value;
         var password = this.querySelector('[name="password"]').value;
 
         if (email === doctorData.email && password === doctorData.password) {
           console.log("sucesso");
           //redirecionar para pagina register
-        //   window.location.href = 'paciente.html';
+          window.location.href = 'doutor_after_login.html';
           // Aqui você pode redirecionar o usuário para a página principal ou realizar outras ações de login bem-sucedido
         } else {
           alert('E-mail ou senha incorretos.');
