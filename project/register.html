@@ -49,6 +49,11 @@
         </div>
 
         <div class="col-md-6">
+          <label class="form-label text-white required">NIF</label>
+          <input type="text" name="nif" pattern="\d{9}" class="form-control" required title="Nif must be 9 digits">
+        </div>
+
+        <div class="col-md-6">
           <label class="form-label text-white required">Confirm Password</label>
           <input type="password" name="confirm-password" class="form-control" required>
         </div>
@@ -87,6 +92,7 @@
           name: this.querySelector('[name="name"]').value,
           email: this.querySelector('[name="email"]').value,
           password: this.querySelector('[name="password"]').value,
+          nif = this.querySelector('[name="nif"]').value,
         };
 
         // Salvar os dados no localStorage

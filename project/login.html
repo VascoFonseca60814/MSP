@@ -37,12 +37,20 @@
         <label class="form-label text-white required">Password</label>
         <input type="password" name="password" class="form-control" required>
       </div>
-      
-      <div class="col-12 mt-3">
-        <button class="btn px-5 mt-2 scale-1 text-white" type="submit" style="background-color: var(--base-color);">
-          Enter
-        </button>
+
+      <div class="row">
+        <div class="col-6 mt-3">
+          <button class="btn px-5 mt-2 scale-1 text-white" type="submit" style="background-color: var(--base-color);">
+            Entrar
+          </button>
+        </div>
+        <div class="col-6 mt-3" style="padding-left: 300px;">
+          <button class="btn px-5 mt-2 scale-1 text-white" type="submit" onclick="location.href='register.html';" style="background-color: var(--base-color);">
+            Não tem registo?
+          </button>
+        </div>
       </div>
+
     </form>
   </div>
 </div>
@@ -73,7 +81,7 @@
         if (email === userData.email && password === userData.password) {
           console.log("sucesso");
           //redirecionar para pagina register
-          window.location.href = 'paciente_after_login.html';
+          window.location.href = 'admin.html';
           // Aqui você pode redirecionar o usuário para a página principal ou realizar outras ações de login bem-sucedido
         } else {
           alert('E-mail ou senha incorretos.');
