@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback - MyClinic</title>
+    <link rel="icon" type="image/x-icon" href="res/logo2.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+<body style="min-height: 100vh; background-color: #f4f4f9;">
+
+<nav class="autohide navbar navbar-expand navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fadein" href="./paciente_after_login.html">
+            <img src="./res/logo2.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+            Clinic made for you
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-5 pt-5">
+    <h2 class="text-white">Feedback for Your Consultation</h2>
+    <div class="form-group">
+        <label for="nameInput" class="text-white">Enter your name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name" class="form-control">
+        <button onclick="loadConsultations()" class="btn btn-primary mt-2">Load Consultations</button>
+    </div>
+    
+    <div class="form-group mt-3">
+        <label for="consultationSelect" class="text-white">Pick Consultation:</label>
+        <select id="consultationSelect" class="form-control" onchange="showFeedbackForm()">
+            <!-- Options will be added here dynamically -->
+        </select>
+    </div>
+
+    <div id="feedbackForm" class="d-none">
+        <div class="form-group mt-3">
+            <label for="rating" class="text-white">Rating:</label>
+            <select id="rating" class="form-control">
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+        </div>
+        <div class="form-group mt-3">
+            <label for="feedbackMessage" class="text-white">Message:</label>
+            <textarea id="feedbackMessage" class="form-control" rows="4" placeholder="Write your feedback here..."></textarea>
+        </div>
+        <button class="btn btn-primary mt-3" onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+</div>
+
+<footer class="py-4 text-center text-md-start mt-5">
+    <div class="container">
+        <!-- Footer content similar to other pages -->
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/77b73da3f6.js" crossorigin="anonymous"></script>
+<script>
+function loadConsultations() {
+    var name = document.getElementById('nameInput').value;
+    var consultations = JSON.parse(localStorage.getItem('consultations')) || {};
+    var consultationsList = consultations[name];
+
+    if (consultationsList) {
+        var select = document.getElementById('consultationSelect');
+        select.innerHTML = '<option value="">Select a Consultation</option>'; // Clear previous options and add a prompt
+        consultationsList.forEach(function(code) {
+            var option = new Option('Consultation Code: ' + code, code);
+            select.add(option);
+        });
+        select.classList.remove('d-none');
+    } else {
+        alert('No consultations found for this name.');
+        document.getElementById('consultationSelect').classList.add('d-none');
+        document.getElementById('feedbackForm').classList.add('d-none'); // Hide the feedback form if no consultations
+    }
+}
+
+function showFeedbackForm() {
+    var consultationSelect = document.getElementById('consultationSelect');
+    if (consultationSelect.value !== "") {
+        document.getElementById('feedbackForm').classList.remove('d-none');
+    } else {
+        document.getElementById('feedbackForm').classList.add('d-none');
+    }
+}
+
+function submitFeedback() {
+    var name = document.getElementById('nameInput').value;
+    var consultationCode = document.getElementById('consultationSelect').value;
+    var rating = document.getElementById('rating').value;
+    var message = document.getElementById('feedbackMessage').value;
+
+    if (!consultationCode) {
+        alert('Please select a consultation.');
+        return;
+    }
+
+    // Retrieve existing feedback or initialize it if not present
+    var allFeedback = JSON.parse(localStorage.getItem('allFeedback')) || [];
+
+    // Create a feedback object
+    var feedback = {
+        name: name,
+        consultationCode: consultationCode,
+        rating: rating,
+        message: message
+    };
+
+    // Add the new feedback to the array
+    allFeedback.push(feedback);
+
+    // Save the updated feedback array to localStorage
+    localStorage.setItem('allFeedback', JSON.stringify(allFeedback));
+
+    console.log('Feedback submitted for:', consultationCode, 'Rating:', rating, 'Message:', message);
+    alert('Feedback submitted!');
+
+    // Optionally reset the form
+    document.getElementById('feedbackMessage').value = '';
+    document.getElementById('rating').value = '5';
+    document.getElementById('consultationSelect').selectedIndex = 0;
+    document.getElementById('feedbackForm').classList.add('d-none');
+}
+</script>
+
+</body>
+</html>
