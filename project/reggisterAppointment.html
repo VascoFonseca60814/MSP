@@ -16,9 +16,9 @@
 
   <nav class="autohide navbar navbar-expand navbar-dark fixed-top " aria-label="Second navbar example">
     <div class="container">
-      <a class="navbar-brand fadein" href="#">
+      <a class="navbar-brand fadein" href="doutor_after_login.html">
         <img src="./res/icon.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
-        Registration
+        New Appointment
       </a>
     </div>
   </nav>
@@ -44,12 +44,7 @@
         </div>
 
         <div class="col-md-6">
-          <label class="form-label text-white required">Doctor Name</label>
-          <input type="text" name="doctor_name" class="form-control" required>
-        </div>
-
-        <div class="col-md-6">
-          <label class="form-label text-white required">Appointment Type</label>
+          <label class="form-label text-white required">Sintoms</label>
           <input type="text" name="consultation_type" class="form-control" required>
         </div>
 
@@ -65,7 +60,7 @@
         </div>
 
         <div class="col-12 mt-3">
-          <button class="btn px-5 mt-2 scale-1 text-white float-end" type="button" onclick="location.href='index.html';"
+          <button class="btn px-5 mt-2 scale-1 text-white float-end" type="submit"
             style="background-color: var(--base-color);">
             Register
           </button>
@@ -97,19 +92,24 @@
         var formData = {
           name: this.querySelector('[name="name"]').value,
           nif: this.querySelector('[name="nif"]').value,
-          doctor_name: this.querySelector('[name="doctor_name"]').value,
           consultation_type: this.querySelector('[name="consultation_type"]').value,
-          required_equipment: this.querySelector('[name="required_equipment"]').value,
           date: this.querySelector('[name="date"]').value,
           time: this.querySelector('[name="time"]').value,
         };
 
-        // Save data to localStorage
-        localStorage.setItem('AppointmentWithEquipment', JSON.stringify(formData));
+        // Retrieve existing appointments or initialize if not present
+        var appointments = JSON.parse(localStorage.getItem('appointments')) || [];
 
-        alert('User registered successfully!');
+        // Add the new appointment
+        appointments.push(formData);
 
-        window.location.href = 'admin.html';
+        // Save updated appointments back to localStorage
+        localStorage.setItem('appointments', JSON.stringify(appointments));
+
+        alert('Appointment registered successfully!');
+
+        // Redirect to another page if necessary, otherwise clear the form
+        window.location.href = 'paciente_after_login.html'; // Uncomment this if you want to redirect
       });
     });
   </script>

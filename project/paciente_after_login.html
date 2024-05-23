@@ -68,23 +68,6 @@
                         height="50"
                 />
               </a>
-              <!--<div class="dropdown-menu dropdown-menu-end rounded-1 p-3">
-                <a class="dropdown-item" href="./PersonalArea.html"
-                  ><i class="fa-solid fa-user me-3"></i>Perfil</a
-                >
-                <a class="dropdown-item" href="./ListofFavorites.html"
-                  ><i class="fa-regular fa-heart me-3"></i>Favoritos</a
-                >
-                <a class="dropdown-item" href="./listReservations.html"
-                  ><i class="fa-regular fa-clipboard me-3"></i>Reservas</a
-                >
-                <a class="dropdown-item" href="./ListVenues.html"
-                  ><i class="fa-solid fa-house me-3"></i>Minhas venues</a
-                >
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"
-                  ><i class="fa fa-sign-out me-3"></i> Sair</a>
-              </div>!-->
             </div>
           </li>
         </ul>
@@ -109,7 +92,7 @@
                   <div class="card-body">
                       <h5 class="card-title" style="font-size: 40px">Check-In</h5>
                       <p class="card-text">Make your check-in</p>
-                      <a href="check-in.html" class="btn btn-primary px-3">Verify</a>
+                      <a href="accepted_appointments.html" class="btn btn-primary px-3">Verify</a>
                   </div>
               </div>
           </div>
@@ -124,6 +107,16 @@
                   </div>
               </div>
           </div>
+      
+
+      <div class="col-md-5 mb-3 shadow-div shadow p-5 mx-5">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="font-size: 40px">Register Appointment</h5>
+            <p class="card-text">Register new Appointment!</p>
+            <a href="reggisterAppointment.html" class="btn btn-primary px-3">Register</a>
+          </div>
+        </div>
       </div>
 
           
@@ -224,23 +217,6 @@
     <script type="text/javascript" src="./javascript/java.js"></script>
 
     <script>
-      function loadInfoToCatalog() {
-        var searchButton = document.getElementById("searchButton");
-        if (searchButton) {
-          searchButton.addEventListener("click", () => {
-            var localizacao = document.getElementById("loc").value;
-            var ocasiao = document.getElementById("ty").value;
-            var convidados = document.getElementById("convidados").value;
-
-            localStorage.setItem("localizacao", localizacao);
-            localStorage.setItem("ocasiao", ocasiao);
-            localStorage.setItem("convidados", convidados);
-
-            window.location.href = "./catalog.html";
-          });
-        }
-      }
-      loadInfoToCatalog();
     </script>
     
   </body>
