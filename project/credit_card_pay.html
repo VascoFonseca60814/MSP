@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit Card Payment - MyClinic</title>
+    <link rel="icon" type="image/x-icon" href="res/logo2.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+
+<body style="min-height: 100vh; background-color: #f4f4f9;">
+
+<nav class="autohide navbar navbar-expand navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fadein" href="./paciente_after_login.html">
+            <img src="./res/logo2.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+            Clinic made for you
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="mb-4 text-center" style="color: #ffffff;">Credit Card Payment</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="cardNumber" class="form-label" style="color: #ffffff;">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cardName" class="form-label" style="color: #ffffff;">Name on Card</label>
+                    <input type="text" class="form-control" id="cardName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="expiryDate" class="form-label" style="color: #ffffff;">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cvv" class="form-label" style="color: #ffffff;">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="***" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Pay Now</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="py-4 text-center text-md-start mt-5">
+    <div class="container">
+        <!-- Footer content similar to other pages -->
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
